@@ -21,7 +21,7 @@ public class LatitudeController {
 
     @PostMapping
     public ResponseEntity<?> setLocation(@RequestBody Localization localization){
-        jsonKafkaTemplate.send("topic-one", localization);
+        jsonKafkaTemplate.send("localization-topic", localization);
 
         return ResponseEntity.ok().build();
     }
